@@ -15,15 +15,15 @@ body {
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', san-serif;
 }
 
 /* Header */
 header {
-    background-color: #FFFFFF;
-    padding: 0 1rem ;
+    background-color: #ffffff;
+    padding: 0 1rem;
     position: fixed;
-    z-index: 99; 
+    z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
@@ -60,7 +60,7 @@ h1 {
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    background-color:#ffffff;
+    background-color: #ffffff;
     width: 100%;
     left: 0;
     padding: 0 1rem;
@@ -83,14 +83,41 @@ nav {
 .nav-toggle-label {
     font-size: 2rem;
 }
+
 /* Main content */
 main {
     background-color: lightblue;
     /* main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 
 /* Footer */
 footer {
     background-color: orange
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header*/
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+    
 }
