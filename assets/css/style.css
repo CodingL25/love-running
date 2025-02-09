@@ -15,7 +15,14 @@ body {
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: 'Lato', san-serif;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 /* Header */
@@ -35,14 +42,6 @@ header a {
     text-decoration: none;
     color: inherit;
 }
-
-h1 {
-    font-family: 'Oswald', san-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-}
-
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
@@ -90,13 +89,37 @@ main {
     flex: 1 0 auto;
     margin-top: 47px;
 }
-/* Hero ID */
+
+
+/* Hero image */
 #hero {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
 }
 
+#cover-text {
+    /*final rgba value sets opacity so this is semi-transparant */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    /*absolute position in relation to hero image */
+    position: absolute;
+    /*doesn't stick to the bottom of the image */
+    bottom: 30px;
+    /*doesn't cover the full width of the screen */
+    width: 80%;
+    min-height: 200px;
+    /*doesn't stick to top of the cover-text div */
+    padding-top: 40px;
+    /*space it from the edge of the screen */
+    padding-left: 10px;
+}
+
+/* Targeting descendents of the cover-text ID*/
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
+}
 
 /* Footer */
 #social-networks {
@@ -104,6 +127,7 @@ main {
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
+    /* Remove bullet point styling*/
     list-style-type: none;
 }
 
@@ -147,7 +171,15 @@ main {
         /* accomodating larger heading */
         margin-top: 79px;
     }
+
+    /* Hero  */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+
 }
+
 
 /* Large devices: laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
