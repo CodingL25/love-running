@@ -149,6 +149,23 @@ main {
     margin: 5px 0;
 }
 
+/* benefits image */
+#circle-cover-bg {
+    height: 90vw;
+    width: 90vw;
+    background: url("../images/reasons-image.webp") no-repeat top center/cover;
+    margin-bottom: 20px;
+    /* image must have equal width and height for border-radius of 50% to make it into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* Footer */
 #social-networks {
     text-align: center;
